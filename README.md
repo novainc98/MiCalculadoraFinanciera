@@ -1,5 +1,4 @@
-👨‍💻 Prueba el demo y descubre lo útil que puede ser esta herramienta para tus finanzas personales.
->[Demo aquí 👉 https://novainc98.github.io/MiCalculadoraFinanciera/](https://novainc98.github.io/MiCalculadoraFinanciera/)
+
 
 # Mi Calculadora Financiera
 ¡Hola! Soy @novainc98 y hoy quiero compartir algo muy interesante. Hace poco, un gran amigo me preguntó si sabía calcular las ganancias al invertir en un banco o en Cetes Directo. Al principio, me di cuenta de que el proceso manual puede ser un poco lento y complicado, así que decidí crear una herramienta que hace todo el trabajo por ti.
@@ -19,3 +18,7 @@ Esta calculadora está diseñada para ayudarte a proyectar de manera fácil y r�
 
 ¡Espero que te guste y te sea útil! No dudes en dejar tus comentarios o sugerencias. ¡Vamos a hacer que las finanzas sean más fáciles para todos! 💰📊
 
+ 👨‍💻 Prueba el demo y descubre lo útil que puede ser esta herramienta para tus finanzas personales.
+
+ # Demo aquí
+>👉 [https://novainc98.github.io/MiCalculadoraFinanciera/](https://novainc98.github.io/MiCalculadoraFinanciera/)
