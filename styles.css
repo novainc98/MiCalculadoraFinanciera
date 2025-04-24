@@ -1,5 +1,4 @@
 body{
-    background-color: rgb(156, 218, 139);
     background-color: #E4E8E5;
     margin: 0;
     padding: 0;
@@ -11,10 +10,27 @@ body{
     align-items: center;
 }
 
+.input-con-simbolo {
+    position: relative;
+  }
+  
+  .input-con-simbolo .simbolo {
+    position: absolute;
+    left: 120px;
+    top:27%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 600;
+    color: #919090;
+    pointer-events: none;
+  }
+
 h1{
     font-family: 'Roboto';
     font-weight: 400;
 }
+
+
 
 #tablaGanancias {
     margin-left: auto;
@@ -92,4 +108,10 @@ button:hover {
         font-size: 0.9rem;
         padding: 0.5rem 1rem;
     }
+}
+
+
+#montoFinal{
+    color: #4CAF50;
+    font-weight: 600;
 }

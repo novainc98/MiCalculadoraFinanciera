@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 490 490" xml:space="preserve">
+<g>
+	<g>
+		<path style="fill:#AFB6BB;" d="M420,115v345c0,11-9,20-20,20H90c-11,0-20-9-20-20V115H420z"/>
+		<path style="fill:#7F858A;" d="M420,30v85H70V30c0-11,9-20,20-20h310C411,10,420,19,420,30z"/>
+	</g>
+	<g id="XMLID_41_">
+		<g>
+			<rect x="105" y="385" style="fill:#E7ECED;" width="70" height="60"/>
+			<rect x="175" y="385" style="fill:#E7ECED;" width="70" height="60"/>
+			<rect x="245" y="385" style="fill:#E7ECED;" width="70" height="60"/>
+			<rect x="315" y="385" style="fill:#E7ECED;" width="70" height="60"/>
+			<rect x="315" y="325" style="fill:#E7ECED;" width="70" height="60"/>
+			<rect x="245" y="325" style="fill:#E7ECED;" width="70" height="60"/>
+			<rect x="175" y="325" style="fill:#E7ECED;" width="70" height="60"/>
+			<rect x="105" y="325" style="fill:#E7ECED;" width="70" height="60"/>
+			<rect x="105" y="265" style="fill:#E7ECED;" width="70" height="60"/>
+			<rect x="175" y="265" style="fill:#E7ECED;" width="70" height="60"/>
+			<rect x="245" y="265" style="fill:#E7ECED;" width="70" height="60"/>
+			<rect x="315" y="265" style="fill:#E7ECED;" width="70" height="60"/>
+			<rect x="315" y="210" style="fill:#E7ECED;" width="70" height="55"/>
+			<rect x="245" y="210" style="fill:#E7ECED;" width="70" height="55"/>
+			<rect x="175" y="210" style="fill:#E7ECED;" width="70" height="55"/>
+			<rect x="105" y="210" style="fill:#E7ECED;" width="70" height="55"/>
+			<polygon style="fill:#AFB6BB;" points="175,210 105,210 105,150 385,150 385,210 315,210 245,210 			"/>
+		</g>
+		<path style="fill:#231F20;" d="M385,140H105c-5.522,0-10,4.477-10,10v295c0,5.523,4.478,10,10,10h280c5.522,0,10-4.477,10-10V150
+			C395,144.477,390.522,140,385,140z M375,160v40H115v-40H375z M255,275h50v40h-50V275z M235,315h-50v-40h50V315z M255,255v-35h50
+			v35H255z M235,255h-50v-35h50V255z M165,255h-50v-35h50V255z M165,275v40h-50v-40H165z M165,335v40h-50v-40H165z M185,335h50v40
+			h-50V335z M235,395v40h-50v-40H235z M255,395h50v40h-50V395z M255,375v-40h50v40H255z M325,335h50v40h-50V335z M325,315v-40h50v40
+			H325z M325,255v-35h50v35H325z M115,395h50v40h-50V395z M325,435v-40h50v40H325z"/>
+	</g>
+	<g id="XMLID_43_">
+		<g>
+			<rect x="105" y="45" style="fill:#43B05C;" width="280" height="70"/>
+		</g>
+		<path style="fill:#231F20;" d="M400,0H90C73.458,0,60,13.458,60,30v430c0,16.542,13.458,30,30,30h310c16.542,0,30-13.458,30-30V30
+			C430,13.458,416.542,0,400,0z M90,20h310c5.514,0,10,4.486,10,10v75h-15V45c0-5.523-4.478-10-10-10H105c-5.522,0-10,4.477-10,10
+			v60H80V30C80,24.486,84.486,20,90,20z M375,105H115V55h260V105z M400,470H90c-5.514,0-10-4.486-10-10V125h330v335
+			C410,465.514,405.514,470,400,470z"/>
+	</g>
+	<g>
+		<rect x="130" y="170" style="fill:#231F20;" width="25" height="20"/>
+	</g>
+	<g>
+		<rect x="170" y="170" style="fill:#231F20;" width="25" height="20"/>
+	</g>
+	<g>
+		<rect x="210" y="170" style="fill:#231F20;" width="25" height="20"/>
+	</g>
+	<g>
+		<rect x="305" y="170" style="fill:#231F20;" width="55" height="20"/>
+	</g>
+</g>
+</svg>

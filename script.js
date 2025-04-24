@@ -13,10 +13,12 @@ document.getElementById("formulario").addEventListener("submit", function(event)
     const gananciaBruta = monto * (interes / 100);
     const impuesto = gananciaBruta * (isr / 100);
     const ingresoNeto = gananciaBruta - impuesto;
+    const montoFinal = gananciaBruta + monto;
 
     document.getElementById("ingresoBrutoAnual").textContent = `Ingreso Bruto Anual: $${gananciaBruta.toFixed(2)}`;
     document.getElementById("isrAnual").textContent =`ISR Anual: $${impuesto.toFixed(2)}`;
     document.getElementById("ingresoNetoAnual").textContent = `Ingreso Neto Anual: $${ingresoNeto.toFixed(2)}`;
+    document.getElementById("montoFinal").textContent = `$${montoFinal.toFixed(2)}`;
 
     function calcularGananciaPorMeses(monto, interes, isr, meses) {
         const interesMensual = interes / 12;
