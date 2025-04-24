@@ -27,8 +27,8 @@
 
 <body>
     <div class="contenido">
-        <div class="logo" style="display: flex; flex-direction: row; justify-content: center; gap: 0.5rem;">
-            <img src="/assets/c11.svg" alt="logo" style="width: 2rem;">
+        <div class="logo" style="display: flex; flex-direction: row; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
+            <img src="/assets/c11.svg" alt="logo">
             <h1 class="bebe">Mi Calculadora Financiera</h1>
          </div>
 
@@ -36,7 +36,7 @@
             <label for="monto">Monto a invertir</label>
             <div class="input-con-simbolo">
                 <span class="simbolo">$</span>
-                <input type="number" id="monto" name="monto" min="0.01" max="10000000" step="0.01" placeholder="0"
+                <input type="text" id="monto" name="monto" min="0.01" max="10000000" step="0.01" placeholder="0"
                 inputmode="numeric" required tabindex="1">
             </div>
 
@@ -58,7 +58,7 @@
             <br><button id="calcular" tabindex="4">Calcular</button>
 
             <div class="medes">
-                <h3>Ganancia estimada por plazo</h2>
+                <h3 class="titulo-info">Ganancia estimada por plazo</h2>
                     <table id="tablaGanancias">
                         <thead>
                             <tr>
@@ -90,18 +90,14 @@
                             </tr>
                         </tbody>
                     </table>
+                    <h3 class="titulo-info">Total estimado al finalizar el periodo<br>Sin aplicar retenciones</h3>
+                    <p id="montoFinal">$0.00</p> <!-- Para mostrar la suma del moto incial y el interes bruto anual -->
+        
+                    <h3 class="titulo-info">Análisis extra</h3>
+                    <p id="ingresoBrutoAnual"></p>
+                    <p id="isrAnual"></p>
+                    <p id="ingresoNetoAnual"></p>        
             </div>
-
-            <h3>Total estimado al finalizar el periodo<br>Sin aplicar retenciones</h3>
-            <p id="montoFinal">$0.00</p> <!-- Para mostrar la suma del moto incial y el interes bruto anual -->
-
-            <h3>Análisis extra</h3>
-            <p id="ingresoBrutoAnual"></p>
-            <p id="isrAnual"></p>
-            <p id="ingresoNetoAnual"></p>
-
-
-
         </form>
     </div>
     <script src="script.js"></script>

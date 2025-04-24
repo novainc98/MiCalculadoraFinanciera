@@ -1,3 +1,4 @@
+/* Estilo general para el cuerpo de la página: color de fondo, sin márgenes ni relleno, tamaño completo, fuente Roboto, y centrado con flexbox */
 body{
     background-color: #E4E8E5;
     margin: 0;
@@ -10,41 +11,56 @@ body{
     align-items: center;
 }
 
+/* Contenedor relativo para inputs con símbolo posicionado dentro */
 .input-con-simbolo {
     position: relative;
   }
   
+  /* Estilo para el símbolo dentro del input: posición absoluta, tamaño y color */
   .input-con-simbolo .simbolo {
     position: absolute;
-    left: 120px;
-    top:27%;
+    left: 35%;
+    top:30%;
     transform: translateY(-50%);
-    font-size: 16px;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #919090;
     pointer-events: none;
   }
 
-h1{
-    font-family: 'Roboto';
-    font-weight: 400;
-}
+  @media (max-width: 600px) {
+    .input-con-simbolo .simbolo {
+      left: 35%; /* o el valor que mejor se ajuste */
+    }
+  }
 
-
-
+/* Centrar la tabla de ganancias horizontalmente */
 #tablaGanancias {
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Centrar el texto dentro de los elementos con clase contenido */
 .contenido{
     text-align: center;
 }
-
+.logo img{
+    width: 2rem;
+}
+/* Estilos responsivos para pantallas pequeñas: ajustar tamaño de fuente de h1 y párrafos */
+/* h1{
+    font-size: clamp(1.rem, 4vw, 2.5rem);
+} */
 @media(max-width: 600px){
-    h1{
-        font-size: 1.7rem; 
+    h1 {
+        font-size: 1.6rem;
+        white-space: nowrap;
+      }
+
+    .logo img{
+        width: 1.5rem;
     }
+
 
     p{
         font-size: 1rem;
@@ -52,23 +68,33 @@ h1{
 }
 
 
-/* Ocultar los botones en todos los navegadores */
+
+/* Ocultar los botones de incremento/decremento en inputs tipo número para todos los navegadores WebKit */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-input[type="number"] {
+/* Estilo para inputs tipo número: padding, tamaño de fuente, ancho, márgenes y alineación del texto */
+input[type="number"],
+input[type="text"] {
     padding: 0.5rem;
     font-size: 1rem;
+    border: none ;
+    border-radius: 5px;
     width: 8rem;
     max-width: 100%;
     margin-top: 0rem;
     text-align: center;
     margin-bottom: 1.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregar sombra */
 }
 
+input[type="text"] {
+    appearance: textfield; /* Solo aplica a type="text" */
+}
+/* Estilo para etiquetas: tamaño de fuente, negrita, bloque y margen inferior */
 label {
     font-size: 1.1rem;
     font-weight: bold;
@@ -76,6 +102,7 @@ label {
     margin-bottom: 0.4rem;
 }
 
+/* Estilos responsivos para inputs y labels en pantallas pequeñas */
 @media(max-width: 600px){
     input[type="number"] {
         font-size: 0.9rem;
@@ -86,6 +113,7 @@ label {
     }
 }
 
+/* Estilo para botones: padding, tamaño de fuente, negrita, color de fondo y texto, sin borde, bordes redondeados, cursor y transición */
 button {
     padding: 0.6rem 1.2rem;
     font-size: 1rem;
@@ -98,20 +126,42 @@ button {
     transition: background-color 0.3s ease;
 }
 
+/* Cambio de color de fondo en botones al pasar el cursor */
 button:hover {
     background-color: #45a049;
 }
-
+#montoFinal{
+    font-size: 1.4rem;  
+    color: #45a049;
+    font-weight: 700;
+}
+/* Estilos responsivos para botones en pantallas pequeñas: margen inferior, tamaño de fuente y padding */
 @media(max-width: 600px) {
     button {
         margin-bottom: 1.5rem;
         font-size: 0.9rem;
         padding: 0.5rem 1rem;
     }
+
+    .titulo-info{
+        font-size: 1rem;
+    }
+
+    .medes th{
+        font-size: 0.8rem;
+    }
+
+    .medes tr{
+        font-size: 0.8rem;
+    }
+
+    .medes p{
+        font-size: 0.8rem;
+    }
+
+    #montoFinal{
+        font-size: 0.8rem;
+        color: #45a049;
+    }
 }
 
-
-#montoFinal{
-    color: #4CAF50;
-    font-weight: 600;
-}

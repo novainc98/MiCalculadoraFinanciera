@@ -1,7 +1,8 @@
-document.getElementById("formulario").addEventListener("submit", function(event) {
+document.getElementById("formulario").addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const monto = parseFloat(document.getElementById("monto").value);
+    // const monto = parseFloat(document.getElementById("monto").value);
+    const monto = parseFloat(document.getElementById("monto").value.replace(/,/g, ""));
     const interes = parseFloat(document.getElementById("interes").value);
     const isr = parseFloat(document.getElementById("isr").value);
 
@@ -15,10 +16,15 @@ document.getElementById("formulario").addEventListener("submit", function(event)
     const ingresoNeto = gananciaBruta - impuesto;
     const montoFinal = gananciaBruta + monto;
 
-    document.getElementById("ingresoBrutoAnual").textContent = `Ingreso Bruto Anual: $${gananciaBruta.toFixed(2)}`;
-    document.getElementById("isrAnual").textContent =`ISR Anual: $${impuesto.toFixed(2)}`;
-    document.getElementById("ingresoNetoAnual").textContent = `Ingreso Neto Anual: $${ingresoNeto.toFixed(2)}`;
-    document.getElementById("montoFinal").textContent = `$${montoFinal.toFixed(2)}`;
+    // document.getElementById("ingresoBrutoAnual").textContent = `Ingreso Bruto Anual: $${gananciaBruta.toFixed(2).toLocaleString("en-US")}`;
+    // document.getElementById("isrAnual").textContent = `ISR Anual: $${impuesto.toFixed(2).toLocaleString("en-US")}`;
+    // document.getElementById("ingresoNetoAnual").textContent = `Ingreso Neto Anual: $${ingresoNeto.toFixed(2).toLocaleString("en-US")}`;
+    // document.getElementById("montoFinal").textContent = `$${montoFinal.toFixed(2).toLocaleString("en-US")}`;
+
+    document.getElementById("ingresoBrutoAnual").textContent = `Ingreso Bruto Anual: $${gananciaBruta.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+    document.getElementById("isrAnual").textContent = `ISR Anual: $${impuesto.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+    document.getElementById("ingresoNetoAnual").textContent = `Ingreso Neto Anual: $${ingresoNeto.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+    document.getElementById("montoFinal").textContent = `$${montoFinal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
 
     function calcularGananciaPorMeses(monto, interes, isr, meses) {
         const interesMensual = interes / 12;
@@ -32,18 +38,32 @@ document.getElementById("formulario").addEventListener("submit", function(event)
     }
 
     const resultados1m = calcularGananciaPorMeses(monto, interes, isr, 1);
-    document.getElementById("ganancia1m").textContent = `$${resultados1m.ingresoNeto}`;
-    document.getElementById("isr1m").textContent = `$${resultados1m.impuesto}`;
+    document.getElementById("ganancia1m").textContent = `$${resultados1m.ingresoNeto.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+    document.getElementById("isr1m").textContent = `$${resultados1m.impuesto.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
 
     const resultados3m = calcularGananciaPorMeses(monto, interes, isr, 3);
-    document.getElementById("ganancia3m").textContent = `$${resultados3m.ingresoNeto}`;
-    document.getElementById("isr3m").textContent = `$${resultados3m.impuesto}`;
+    document.getElementById("ganancia3m").textContent = `$${resultados3m.ingresoNeto.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+    document.getElementById("isr3m").textContent = `$${resultados3m.impuesto.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
 
     const resultados6m = calcularGananciaPorMeses(monto, interes, isr, 6);
-    document.getElementById("ganancia6m").textContent = `$${resultados6m.ingresoNeto}`;
-    document.getElementById("isr6m").textContent = `$${resultados6m.impuesto}`;
+    document.getElementById("ganancia6m").textContent = `$${resultados6m.ingresoNeto.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+    document.getElementById("isr6m").textContent = `$${resultados6m.impuesto.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
 
     const resultados12m = calcularGananciaPorMeses(monto, interes, isr, 12);
-    document.getElementById("ganancia12m").textContent = `$${resultados12m.ingresoNeto}`;
-    document.getElementById("isr12m").textContent = `$${resultados12m.impuesto}`;
+    document.getElementById("ganancia12m").textContent = `$${resultados12m.ingresoNeto.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+    document.getElementById("isr12m").textContent = `$${resultados12m.impuesto.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+});
+
+document.getElementById("monto").addEventListener("input", function (e) {
+    const input = e.target;
+    const cursorPos = input.selectionStart;
+    const originalLength = input.value.length;
+
+    let valor = input.value.replace(/,/g, "");
+    if (!isNaN(valor) && valor !== "") {
+        input.value = parseFloat(valor).toLocaleString("en-US");
+        const newLength = input.value.length;
+        const diff = newLength - originalLength;
+        input.setSelectionRange(cursorPos + diff, cursorPos + diff);
+    }
 });
