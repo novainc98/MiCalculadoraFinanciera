@@ -1,13 +1,19 @@
 body{
     background-color: rgb(156, 218, 139);
+    background-color: #E4E8E5;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-
+    font-family: 'Roboto';
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h1{
+    font-family: 'Roboto';
+    font-weight: 400;
 }
 
 #tablaGanancias {

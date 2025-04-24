@@ -6,13 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invercalculadora</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="contenido">
-        <h1>!Bienvenido a Mi Calculadora Financiera!</h1>
-        <p>Esta pagina se adapta a cualquier pantalla</p>
-
+        <h1 class="bebe">Mi Calculadora Financiera</h1>
+        
         <form id="formulario">
             <label for="monto">Monto a invertir</label>
             <input type="number" id="monto" name="monto" min="0.01" max="1000000" step="0.01" placeholder="0"
@@ -25,7 +37,7 @@
             <label for="isr">ISR anual</label>
             <input type="number" id="isr" name="isr" min="0.01" max="100" step="0.01" placeholder="0"
                 inputmode="numeric" value="5" required tabindex="3">
-            
+
             <br><button id="calcular" tabindex="4">Calcular</button>
 
             <p id="ingresoBrutoAnual"></p>
@@ -43,10 +55,26 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>1 mes</td><td id="ganancia1m"></td><td id="isr1m"></td></tr>
-                        <tr><td>3 meses</td><td id="ganancia3m"></td><td id="isr3m"></td></tr>
-                        <tr><td>6 meses</td><td id="ganancia6m"></td><td id="isr6m"></td></tr>
-                        <tr><td>12 meses</td><td id="ganancia12m"></td><td id="isr12m"></td></tr>
+                        <tr>
+                            <td>1 mes</td>
+                            <td id="ganancia1m"></td>
+                            <td id="isr1m"></td>
+                        </tr>
+                        <tr>
+                            <td>3 meses</td>
+                            <td id="ganancia3m"></td>
+                            <td id="isr3m"></td>
+                        </tr>
+                        <tr>
+                            <td>6 meses</td>
+                            <td id="ganancia6m"></td>
+                            <td id="isr6m"></td>
+                        </tr>
+                        <tr>
+                            <td>12 meses</td>
+                            <td id="ganancia12m"></td>
+                            <td id="isr12m"></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
